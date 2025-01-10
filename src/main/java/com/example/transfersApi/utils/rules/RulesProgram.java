@@ -11,10 +11,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class RulesProgram {
 
   public List<Rule> readRules() {
-    File jsonFile = new File("src\\main\\java\\com\\example\\transfersApi\\utils\\rules\\rulesData.json");
+    File jsonFile = new File("src/main/java/com/example/transfersApi/utils/rules/rulesData.json");
 
     if (!jsonFile.exists()) {
-      throw new RuntimeException("File not found: " + jsonFile.getPath());
+      throw new RuntimeException("File not found: " + jsonFile.getAbsolutePath());
     }
 
     ObjectMapper objectMapper = new ObjectMapper();
